@@ -1,10 +1,15 @@
-import User from "./components/User";
-
+import Student from "./components/Student";
 function App() {
-  const myName = {};
+  const myCar = {
+    brand: "Chevrolet",
+    name: "malibu",
+    color: "black",
+    price: 50000000,
+    img: "https://a1.drive-data.ru/cOri7QwQfT4dKsy-4koCjSXzrrE-1920.jpg",
+  };
   return (
     <>
-      <User ism={myName} />
+      <Student car={myCar} />
     </>
   );
 }
