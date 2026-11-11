@@ -1,13 +1,17 @@
-function Student(props) {
-  console.log(props);
+function Student({ car }) {
+  console.log(car);
 
   return (
     <>
-      <h2>Hello {props.userName}</h2>
+      <div>
+        <img src={car.img} alt={car.name} />
+        <h2>{car.name}</h2>
+        <h3>{car.color}</h3>
+        <h4>{car.price}</h4>
+        <h5>{car.brand}</h5>
+      </div>
     </>
   );
 }
 
 export default Student;
-
-// #car object yaratasiz va bu obj ni ikkinchi componentaga props orqali uzatasiz va DOM ga chiqarasiz

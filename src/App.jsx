@@ -1,10 +1,16 @@
-import User from "./components/User";
+import { useState } from "react";
 
 function App() {
-  const myName = {};
+  const [text, setText] = useState(0);
+
+  console.log(text);
+
   return (
     <>
-      <User ism={myName} />
+      <div>
+        <h2>{text}</h2>
+        <button onClick={() => setText(text - 1)}>Click</button>
+      </div>
     </>
   );
 }
