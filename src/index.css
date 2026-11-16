@@ -3,3 +3,10 @@
     text-transform: uppercase;
     color: blue
 }
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}

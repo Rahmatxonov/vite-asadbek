@@ -1,16 +1,17 @@
 import { useState } from "react";
 
 function App() {
-  const [text, setText] = useState(0);
-
-  console.log(text);
+  const [color, setColor] = useState("yellow");
 
   return (
     <>
-      <div>
-        <h2>{text}</h2>
-        <button onClick={() => setText(text - 1)}>Click</button>
-      </div>
+      <div
+        style={{ backgroundColor: color, width: "500px", height: "500px" }}
+      ></div>
+
+      <button onClick={() => setColor("red")}>Red</button>
+      <button onClick={() => setColor("blue")}>Blue</button>
+      <button onClick={() => setColor("green")}>Green</button>
     </>
   );
 }
