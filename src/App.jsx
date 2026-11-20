@@ -1,18 +1,26 @@
-import { useState } from "react";
+import React from "react";
 
-function App() {
-  const [color, setColor] = useState("yellow");
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
+const App = () => {
   return (
-    <>
-      <div
-        style={{ backgroundColor: color, width: "500px", height: "500px" }}
-      ></div>
-
-      <button onClick={() => setColor("red")}>Red</button>
-      <button onClick={() => setColor("blue")}>Blue</button>
-      <button onClick={() => setColor("green")}>Green</button>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
+
 export default App;
