@@ -1,10 +1,10 @@
 import React from "react";
-import TodoList from "./components/TodoList";
+import Fetch from "./components/Fetch";
 
 const App = () => {
   return (
     <div>
-      <TodoList />
+      <Fetch />
     </div>
   );
 };
