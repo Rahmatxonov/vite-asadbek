@@ -1,6 +1,6 @@
 @import "tailwindcss";
 body {
-    background-image: url('../public/bg.gif');
+    /* background-image: url('../public/bg.gif'); */
 }
 
 .container {
